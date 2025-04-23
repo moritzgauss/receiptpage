@@ -1,0 +1,911 @@
+<html lang="de"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <title>Lina Schwarzenberg</title>
+    <link rel="icon" href="img/favicon.png" id="dynamic-favicon">
+</head> /moritzgauss/ 
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 300vh;
+    overflow-x: hidden;
+    cursor: default;
+    background-color: black;
+    font-family: "Merchant Copy Doublesize";
+}
+
+.background-img {
+    position: fixed; 
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(150deg);
+    z-index: -999999999; 
+    pointer-events: none;
+    width: 160vh;
+}
+
+@font-face {
+    font-family: "Merchant Copy Doublesize";
+    font-style: normal;
+    font-weight: normal;
+    src: local("Merchant Copy Doublesize"), url('../fonts/merchant-copy-doublesize.woff') format('woff');
+}
+
+
+hr,
+p {
+    margin: 0 2vw 0 2vw;
+}
+
+p {
+    transform: scaleY(1.5);
+    line-height: 115%;
+    text-align: center;
+}
+
+a {
+    color: black;
+    cursor: pointer !important;
+}
+
+.main-content {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(5deg);
+    width: 600px;
+    height: auto;
+    color: black;
+    background-color: white;
+    animation-timing-function: ease-out;
+    box-shadow: 12px 12px 22px -12px rgba(0, 0, 0, 1);
+}
+
+
+
+#border {
+    position: absolute;
+    width: 600px;
+    margin-top: -7.1px;
+}
+
+#border-bottom {
+    margin-bottom: -7.1px;
+    width: 600px;
+    transform: rotate(180deg);
+}
+
+
+#welcome {
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    transform: scaleY(2);
+}
+
+#date-container {
+    font-size: 10px;
+}
+
+.el-star {
+    padding-bottom: 5px;
+}
+
+
+.bio {
+    font-size: 10px;
+    line-height: 130%;
+}
+
+.bio a:hover {
+    font-style: italic;
+}
+
+.bio-headline {
+    font-size: 15px;
+}
+
+.ascii {
+    text-align: center;
+    font-size: 10px;
+    transform: scaleY(1.5);
+
+}
+
+
+.bottom {
+    line-height: 130%;
+    font-size: 14px
+}
+
+.bottom a:hover{
+    font-style: italic;
+}
+
+#mailto {
+    color: black;
+}
+
+#barcode {
+    margin-left: 21%;
+    width: 350px;
+}
+
+#linkCV:hover {
+   font-style: italic; 
+}
+
+
+#project {
+    font-size: 12px;
+    cursor: pointer !important;
+}
+
+#project a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer !important;
+}
+
+#project a:hover {
+    text-decoration: line-through;
+}
+
+#blurLink {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-content {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    line-height: 120%;
+}
+
+.project-headline {
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    width: 350px;
+    justify-content: center;
+    left: 50px;
+    top: -80px;
+    line-height: 100%;
+    font-family: "Merchant Copy Doublesize";
+    transform: rotate(-6deg);
+    font-size: 13px;
+    color: black;
+    cursor: pointer;
+    transition: top 0.3s;
+    z-index: 9999999999;
+    background-color: white;
+    box-shadow: 12px 12px 22px -12px rgba(0, 0, 0, 1);
+}
+
+
+.project-headline:hover, .project-headline:active {
+    top: -30px;
+}
+
+#project-border-bottom {
+    width: 351px;
+    height: 10px;
+    transform: rotate(180deg);
+    margin-bottom: -8px;
+}
+
+#project-border-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 350px;
+    height: 9px;
+    margin-top: -8px;
+    padding: 0;
+}
+
+.project-hr {
+    width: 350px;
+    padding: 10px;
+}
+
+.backButton {
+    padding-left: 40px;
+    font-size: 10px;
+    text-align: left;
+}
+
+.backButton:hover {
+    font-style: italic;
+}
+
+h2 {
+    padding: 30px;
+    text-align: center;
+    font-size: 13px;
+    transform: scaleY(1.2);
+}
+
+h2 span {
+    font-size: 10px;
+    transform: scaleY(1.1);
+}
+
+h2 span a {
+    color: black;
+}
+
+h2 span a:hover {
+    font-style: italic;
+}
+
+.text-works {
+    position: fixed;
+    bottom: -290px;
+    transition: bottom 0.5s;
+    right: 40px;
+    padding: 30px;
+    padding-bottom: 46px;
+    width: 350px;
+    text-align: left;
+    background-color: white;
+    transform: scaleY(1.2) rotate(5deg);
+    font-size: 10px;
+    line-height: 130%;
+    color: black;
+    z-index: 9999999999;
+    cursor: pointer;
+    box-shadow: -12px -12px 22px -12px rgba(0, 0, 0, 1);
+    hyphens: auto;
+}
+
+.text-works:hover, .text-works:active {
+    bottom: -0px;
+}
+
+
+#text-works_htdadt {
+    bottom: -175px;
+}
+
+#text-works_htdadt:hover, #text-works_htdadt:active {
+    bottom: -0px;
+}
+
+
+#text-works_pb {
+    bottom: -210px;
+}
+
+#text-works_pb:hover, #text-works_pb:active {
+    bottom: -0px;
+}
+
+
+#text-works_ab {
+    bottom: -205px;
+}
+
+#text-works_ab:hover, #text-works_ab:active {
+    bottom: -0px;
+}
+
+
+#text-works_dd {
+    bottom: -230px;
+}
+
+#text-works_dd:hover, #text-works_dd:active {
+    bottom: -0px;
+}
+
+
+#text-works_at {
+    bottom: -205px;
+}
+
+#text-works_at:hover, #text-works_at:active{
+    bottom: -0px;
+}
+
+
+#text-works_yahn {
+    bottom: -275px;
+}
+
+#text-works_yahn:hover, #text-works_yahn:active  {
+    bottom: -0px;
+}
+
+
+#text-works_ootb {
+    bottom: -380px;
+}
+
+#text-works_ootb:hover, #text-works_ootb:active {
+    bottom: -0px;
+}
+
+
+#text-works_httyr {
+    bottom: -230px;
+}
+
+#text-works_httyr:hover, #text-works_httyr:active {
+    bottom: -0px;
+}
+
+
+#text-works_nz {
+    bottom: -360px;
+}
+
+#text-works_nz:hover, #text-works_nz:active {
+    bottom: -0px;
+}
+
+
+#text-works_es {
+    bottom: -400px;
+}
+
+#text-works_es:hover, #text-works_es:active {
+    bottom: -0px;
+}
+
+
+#text-works_wi {
+    bottom: -330px;
+}
+
+#text-works_wi:hover, #text-works_wi:active {
+    bottom: -0px;
+}
+
+
+
+.text-works a {
+    color: black;
+}
+
+.text-works a:hover {
+    font-style: italic;
+}
+
+.img-works {
+    position: absolute;
+    overflow-y: scroll !important;
+    top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img-works img {
+    margin-bottom: 10px;
+    box-shadow: 12px 12px 22px -12px rgba(0, 0, 0, 1);
+}
+
+.img-works iframe {
+    width: 80vw;
+}
+
+#is-landscape {
+    width: 80vw;
+}
+
+#is-portrait {
+    width: 50vw;
+}
+
+#is-extra {
+    width: 95vw;
+    box-shadow: none;
+}
+
+/******************************************/
+/******************************************/
+/******************************************/
+
+
+@media only screen and (max-device-width: 480px) {
+
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: auto;
+        width: 100% !important;
+        overflow-x: hidden !important;
+        cursor: default;
+        background-color: white;
+        font-family: "Merchant Copy Doublesize";
+    }
+    
+    .background-img {
+        display: none;
+    }
+
+    .main-content {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -28%) rotate(0deg) scale(0.8);
+        width: 430px;
+        overflow-x: hidden !important;
+        height: auto;
+        color: black;
+        background-color: white;
+        animation-timing-function: ease-out;
+        box-shadow: none;
+    }
+
+    #border {
+        display: none;
+    }
+
+    #border-bottom {
+        display: none;
+    }
+
+    .ascii {
+        text-align: center;
+        font-size: 9px;
+        transform: scaleY(1.5);
+
+    }
+
+    #barcode {
+        margin-left: 10%;
+        width: 350px;
+    }
+
+    .bio {
+        font-size: .45rem !important;
+        margin-top: 10px;
+        margin-bottom: 20px
+    }
+
+    .bio br {
+        display: none;
+    }
+
+    #project {
+        font-size: 14px;
+        cursor: pointer !important;
+    }
+
+
+
+    .img-works {
+        position: absolute;
+        overflow-y: scroll !important;
+        padding-top: 100px;
+    }
+
+
+    .mobil {
+        display: block;
+        height: auto !important;
+        background-color: black;
+    }
+
+    .project-headline {
+        padding-top: 30px;
+        width: 300px;
+        justify-content: center;
+        left: 30px;
+        top: -80px;
+        line-height: 100%;
+        font-family: "Merchant Copy Doublesize";
+        transform: rotate(-6deg);
+        font-size: 10px;
+        color: black;
+        cursor: pointer;
+        transition: top 0.3s;
+        z-index: 9999999999;
+        background-color: white;
+        box-shadow: 12px 12px 22px -12px rgba(0, 0, 0, 1);
+    }
+
+
+
+    #project-border-bottom {
+        width: 301px;
+        height: 10px;
+        transform: rotate(180deg);
+        margin-bottom: -8px;
+    }
+
+    #project-border-top {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 9px;
+        margin-top: -8px;
+        padding: 0;
+    }
+
+
+
+
+    h2 {
+        padding: 20px;
+        text-align: center;
+        font-size: 10px;
+        line-height: 130%;
+        transform: scaleY(1.2);
+    }
+
+
+    .img-works {
+        position: absolute;
+        overflow-y: scroll !important;
+        top: 40px;
+        padding-bottom: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    .img-works img {
+        margin-bottom: 20px;
+        box-shadow: 12px 12px 22px -12px rgba(0, 0, 0, 1);
+    }
+    
+    
+    .img-works img:first-child {
+  mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+  mask-mode: alpha;
+    }
+    
+    .img-works img:last-child {
+  mask-image: linear-gradient(to top, transparent 0%, black 30%);
+  mask-mode: alpha;
+}
+
+    .img-works iframe {
+        width: 100vw;
+    }
+
+    #is-landscape {
+        width: 100vw;
+    }
+
+    #is-portrait {
+        width: 100vw;
+    }
+
+    #is-extra {
+        width: 100vw;
+        box-shadow: none;
+    }
+
+    .text-works {
+        position: fixed;
+        bottom: -450px;
+        transition: bottom 0.5s;
+        right: 40px;
+        padding: 30px;
+        padding-bottom: 46px;
+        width: 300px;
+        text-align: left;
+        background-color: white;
+        transform: scaleY(1.2) rotate(5deg);
+        font-size: 10px;
+        line-height: 130%;
+        color: black;
+        z-index: 9999999999;
+        cursor: pointer;
+        box-shadow: -12px -12px 22px -12px rgba(0, 0, 0, 1);
+        hyphens: auto;
+        animation: shake 1s ease-in-out;
+    }
+    
+ @keyframes shake {
+    0% {
+        padding-bottom: 46px;
+    }
+    25% {
+        padding-bottom: 66px;
+    }
+    50% {
+        padding-bottom: 46px;
+    }
+    75% {
+        padding-bottom: 66px;
+    }
+    100% {
+        padding-bottom: 46px;
+    }
+}
+
+    .project-hr {
+        width: 300px;
+        padding: 10px;
+    }
+
+    .stars {
+        margin-left: -30px;
+    }
+
+.backButton {
+    padding-left: 20px;
+    font-size: 10px;
+    text-align: left;
+}
+
+#text-works_htdadt {
+    bottom: -295px;
+}
+
+#text-works_htdadt:hover, #text-works_htdadt:active {
+    bottom: -0px;
+}
+
+#text-works_pb {
+    bottom: -350px;
+}
+
+#text-works_pb:hover, #text-works_pb:active {
+    bottom: -0px;
+}
+
+#text-works_ab {
+    bottom: -325px;
+}
+
+#text-works_ab:hover, #text-works_ab:active {
+    bottom: -0px;
+}
+
+#text-works_dd {
+    bottom: -370px;
+}
+
+#text-works_dd:hover, #text-works_dd:active {
+    bottom: -0px;
+}
+
+#text-works_at {
+    bottom: -365px;
+}
+
+#text-works_at:hover, #text-works_at:active{
+    bottom: -0px;
+}
+
+#text-works_yahn {
+    bottom: -415px;
+}
+
+#text-works_yahn:hover, #text-works_yahn:active  {
+    bottom: -0px;
+}
+
+#text-works_ootb {
+    bottom: -520px;
+}
+
+#text-works_ootb:hover, #text-works_ootb:active {
+    bottom: -0px;
+}
+
+#text-works_httyr {
+    bottom: -380px;
+}
+
+#text-works_httyr:hover, #text-works_httyr:active {
+    bottom: -0px;
+
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+</style>
+<body data-demoway-document-id="kir5x8tfhz32ihguf29eta2t">
+    <div class="main-content" id="main">
+        <img id="border" src="img/zickzack.png">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>RECEIPT</h1>
+        <br>
+        <br>
+        <br>
+        <p id="date-container">Date: 17.8.2024 Time: 17:05:23</p>
+        <br>
+        <p>ORDER #<span id="counter">440959</span></p>
+        <br>
+        <br>
+        <br>
+        <p><span class="el-star">✶</span> Hello World <span class="el-star">✶</span> <br>
+            Welcome to my Website</p>
+        <br>
+        <br>
+        <br>
+        <p class="stars">************************************************</p>
+        <br>
+        <br>
+        <p>You were served by Lina Schwarzenberg</p>
+        <br>
+        <br>
+        <p id="bluredHover" class="bio">Lina Schwarzenberg is a designer who operates <br>at the intersection of design, art, and technology. In addition <br>to her work as a graphic and web designer, she has developed <br>a particular fascination for the interaction between humans and machines. Schwarzenberg delves into the impact of artificial intelligence and critically and experimentally explores both the potential and limitations <br>of this technology, particularly within the realm of design.</p>
+        <br>
+        <br>
+        <br>
+        <p class="stars">************************************************</p>
+        <br>
+        <br>
+        <p>SELECTED WORKS</p>
+        <br>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="twLink" href="the-world-is-beautiful-again.html"><span>The World Is Beautiful Again</span> <span>2023/ONGOING</span></a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="htLink" href="how-to-designing-ai-design-tools.html"><span>How-to: Designing AI Design Tools</span><span>2023</span></a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="pbLink" href="prompt-battle.html"><span>Prompt Battle</span> <span>2022/ONGOING</span></a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="abLink" href="ai-bar.html"><span>AI BAR</span>2022/23</a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="ddLink" href="design-disrupted.html"><span>Design Disrupted</span><span>2023/ONGOING</span></a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="atLink" href="artificial-typefaces.html"><span>Artificial Typefaces</span><span>2022/23</span></a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="ynLink" href="you-are-human-now.html"><span>You Are Human Now</span><span>2022</span></a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="obLink" href="outside-the-bounding-box.html"><span>Outside the Bounding Box</span><span>2022</span></a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="abLink" href="what-if.html"><span>What if?</span>2021/22</a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="hrLink" href="how-to-tame-your-robot.html"><span>How to Tame your Robot</span><span>2021</span></a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="atLink" href="exit-staubi.html"><span>Exit Staubi</span><span>2020</span></a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <p id="project"><a id="blurLink" class="atLink" href="NEIN-zine.html"><span>NEIN Zine</span><span>2019/20</span></a></p>
+        <br>
+        <hr style="border: none; border-top: 1px dashed black">
+        <br>
+        <br>
+        <p id="project"> <a id="mailto" href="mailto:hi@linaschwarzenberg.com">SLIDE INTO MY DM's FOR COLLAB :)))</a><br></p>
+        <br>
+        <br>
+        <p class="stars">************************************************</p>
+        <br>
+        <br>
+        <pre class="ascii">		<br>
+ _______ .-. .-.  .--.  .-. .-.,-. .-. .-.   .-. .---.  .-. .-. 
+|__   __|| | | | / /\ \ |  \| || |/ /   \ \_/ )// .-. ) | | | | 
+  )| |   | `-' |/ /__\ \|   | || | /     \   (_)| | |(_)| | | | 
+ (_) |   | .-. ||  __  || |\  || | \      ) (   | | | | | | | | 
+   | |   | | |)|| |  |)|| | |)|| |) \     | |   \ `-' / | `-')| 
+   `-'   /(  (_)|_|  (_)/(  (_)|((_)-'   /(_|    )---'  `---(_) 
+        (__)           (__)    (_)      (__)    (_)              
+	</pre>
+        <br>
+        <br>
+        <p>for visiting my website</p>
+        <br>
+        <br>
+        <p class="stars">************************************************</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p class="bio">Lina Schwarzenberg is an alumna of the Studienstiftung des <br>
+        	deutschen Volkes and holds a master's degree from <a href="https://www.htw-dresden.de/hochschule/fakultaeten/design">HTWD Design</a>. Since the inception of the <a href="prompt-battle.html">Prompt Battle</a>, she has participated in events such <br> as Transmediale and Re:publica. Her work has been showcased in a variety of exhibitions, both online and irl. She has delivered talks and workshops at numerous venues, including Gropius Bau, Japanisches Palais, and Deutschlandfunk. Schwarzenberg is a member of the <a href="https://fabmobil.org/">Fabmobil</a> Crew. 
+        	 <br>
+        	  <br>
+        	For more details, please → <a id="linkCV" href="CV-Lina-Schwarzenberg.txt" download="">download her CV</a> ←
+        </p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img id="barcode" src="img/barcode.png">
+        <br>
+        <br>
+        <p class="bio">1 3 1 2 9 1 0 0 3 9 4 7 4 1 6 1</p>
+        <br>
+        <br>
+        <br>
+        <p class="bottom">Any Questions? <br>
+            Contact <a id="mailto" href="mailto:hi@linaschwarzenberg.com">hi@linaschwarzenberg.com</a><br>
+            <a href="https://www.instagram.com/solvem.probler/">Instagram</a>, <a href="https://twitter.com/solvemprobler_">Twitter</a></p>
+        <br>
+        <br>
+        <br>
+        <p class="bio">
+            &lt;3</p> <br>
+                <br>
+                <img id="border-bottom" src="img/zickzack.png">
+    </div>
+    <img class="background-img" src="https://static.vecteezy.com/system/resources/previews/014/455/889/non_2x/empty-shopping-trolley-transparent-free-png.png">
+</body>
+</html>
