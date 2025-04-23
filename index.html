@@ -1,11 +1,21 @@
-<html lang="de"><head>
+<!--
+ __  __       ____  
+|  \/  |     / ___| 
+| \  / |    | | __  
+| |\/| |    | |(  | 
+| |  | |  _ | |_) |  
+(_)  (_) (_) \____| 
+
+-->             
+<!DOCTYPE html>
+<html lang="de">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
-    <title>Lina Schwarzenberg</title>
-    <link rel="icon" href="img/favicon.png" id="dynamic-favicon">
-</head> /moritzgauss/ 
-<style>
-* {
+    <title>Max Musti</title>
+    <link rel="icon" href="https://i.pinimg.com/564x/f4/8a/45/f48a4575f7f83b05c1c0a956cac4a597.jpg" id="dynamic-favicon">
+    <style>
+       * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,16 +31,6 @@ body {
     font-family: "Merchant Copy Doublesize";
 }
 
-.background-img {
-    position: fixed; 
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%,-50%) rotate(150deg);
-    z-index: -999999999; 
-    pointer-events: none;
-    width: 160vh;
-}
-
 @font-face {
     font-family: "Merchant Copy Doublesize";
     font-style: normal;
@@ -38,10 +38,9 @@ body {
     src: local("Merchant Copy Doublesize"), url('../fonts/merchant-copy-doublesize.woff') format('woff');
 }
 
-
 hr,
 p {
-    margin: 0 2vw 0 2vw;
+    margin: 0 2vw;
 }
 
 p {
@@ -68,25 +67,19 @@ a {
     box-shadow: 12px 12px 22px -12px rgba(0, 0, 0, 1);
 }
 
-
-
-#border {
-    position: absolute;
+#border,
+#border-bottom {
     width: 600px;
-    margin-top: -7.1px;
 }
 
 #border-bottom {
     margin-bottom: -7.1px;
-    width: 600px;
     transform: rotate(180deg);
 }
-
 
 #welcome {
     text-align: center;
 }
-
 
 h1 {
     font-size: 50px;
@@ -101,7 +94,6 @@ h1 {
 .el-star {
     padding-bottom: 5px;
 }
-
 
 .bio {
     font-size: 10px;
@@ -120,16 +112,14 @@ h1 {
     text-align: center;
     font-size: 10px;
     transform: scaleY(1.5);
-
 }
-
 
 .bottom {
     line-height: 130%;
-    font-size: 14px
+    font-size: 14px;
 }
 
-.bottom a:hover{
+.bottom a:hover {
     font-style: italic;
 }
 
@@ -143,9 +133,8 @@ h1 {
 }
 
 #linkCV:hover {
-   font-style: italic; 
+    font-style: italic;
 }
-
 
 #project {
     font-size: 12px;
@@ -194,7 +183,6 @@ h1 {
     background-color: white;
     box-shadow: 12px 12px 22px -12px rgba(0, 0, 0, 1);
 }
-
 
 .project-headline:hover, .project-headline:active {
     top: -30px;
@@ -276,113 +264,32 @@ h2 span a:hover {
     bottom: -0px;
 }
 
-
-#text-works_htdadt {
-    bottom: -175px;
-}
-
-#text-works_htdadt:hover, #text-works_htdadt:active {
-    bottom: -0px;
-}
-
-
-#text-works_pb {
-    bottom: -210px;
-}
-
-#text-works_pb:hover, #text-works_pb:active {
-    bottom: -0px;
-}
-
-
-#text-works_ab {
-    bottom: -205px;
-}
-
-#text-works_ab:hover, #text-works_ab:active {
-    bottom: -0px;
-}
-
-
-#text-works_dd {
-    bottom: -230px;
-}
-
-#text-works_dd:hover, #text-works_dd:active {
-    bottom: -0px;
-}
-
-
-#text-works_at {
-    bottom: -205px;
-}
-
-#text-works_at:hover, #text-works_at:active{
-    bottom: -0px;
-}
-
-
-#text-works_yahn {
-    bottom: -275px;
-}
-
-#text-works_yahn:hover, #text-works_yahn:active  {
-    bottom: -0px;
-}
-
-
-#text-works_ootb {
-    bottom: -380px;
-}
-
-#text-works_ootb:hover, #text-works_ootb:active {
-    bottom: -0px;
-}
-
-
-#text-works_httyr {
-    bottom: -230px;
-}
-
-#text-works_httyr:hover, #text-works_httyr:active {
-    bottom: -0px;
-}
-
-
-#text-works_nz {
-    bottom: -360px;
-}
-
-#text-works_nz:hover, #text-works_nz:active {
-    bottom: -0px;
-}
-
-
-#text-works_es {
-    bottom: -400px;
-}
-
-#text-works_es:hover, #text-works_es:active {
-    bottom: -0px;
-}
-
-
+#text-works_htdadt,
+#text-works_pb,
+#text-works_ab,
+#text-works_dd,
+#text-works_at,
+#text-works_yahn,
+#text-works_ootb,
+#text-works_httyr,
+#text-works_nz,
+#text-works_es,
 #text-works_wi {
-    bottom: -330px;
+    bottom: -290px; /* Adjusted for demonstration, modify as needed */
 }
 
-#text-works_wi:hover, #text-works_wi:active {
+#text-works_htdadt:hover,
+#text-works_pb:hover,
+#text-works_ab:hover,
+#text-works_dd:hover,
+#text-works_at:hover,
+#text-works_yahn:hover,
+#text-works_ootb:hover,
+#text-works_httyr:hover,
+#text-works_nz:hover,
+#text-works_es:hover,
+#text-works_wi:hover {
     bottom: -0px;
-}
-
-
-
-.text-works a {
-    color: black;
-}
-
-.text-works a:hover {
-    font-style: italic;
 }
 
 .img-works {
@@ -417,14 +324,7 @@ h2 span a:hover {
     box-shadow: none;
 }
 
-/******************************************/
-/******************************************/
-/******************************************/
-
-
 @media only screen and (max-device-width: 480px) {
-
-
     body {
         margin: 0;
         padding: 0;
@@ -454,10 +354,7 @@ h2 span a:hover {
         box-shadow: none;
     }
 
-    #border {
-        display: none;
-    }
-
+    #border,
     #border-bottom {
         display: none;
     }
@@ -466,7 +363,6 @@ h2 span a:hover {
         text-align: center;
         font-size: 9px;
         transform: scaleY(1.5);
-
     }
 
     #barcode {
@@ -477,7 +373,7 @@ h2 span a:hover {
     .bio {
         font-size: .45rem !important;
         margin-top: 10px;
-        margin-bottom: 20px
+        margin-bottom: 20px;
     }
 
     .bio br {
@@ -489,14 +385,11 @@ h2 span a:hover {
         cursor: pointer !important;
     }
 
-
-
     .img-works {
         position: absolute;
         overflow-y: scroll !important;
         padding-top: 100px;
     }
-
 
     .mobil {
         display: block;
@@ -522,8 +415,6 @@ h2 span a:hover {
         box-shadow: 12px 12px 22px -12px rgba(0, 0, 0, 1);
     }
 
-
-
     #project-border-bottom {
         width: 301px;
         height: 10px;
@@ -541,60 +432,12 @@ h2 span a:hover {
         padding: 0;
     }
 
-
-
-
     h2 {
         padding: 20px;
         text-align: center;
         font-size: 10px;
         line-height: 130%;
         transform: scaleY(1.2);
-    }
-
-
-    .img-works {
-        position: absolute;
-        overflow-y: scroll !important;
-        top: 40px;
-        padding-bottom: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-
-    .img-works img {
-        margin-bottom: 20px;
-        box-shadow: 12px 12px 22px -12px rgba(0, 0, 0, 1);
-    }
-    
-    
-    .img-works img:first-child {
-  mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
-  mask-mode: alpha;
-    }
-    
-    .img-works img:last-child {
-  mask-image: linear-gradient(to top, transparent 0%, black 30%);
-  mask-mode: alpha;
-}
-
-    .img-works iframe {
-        width: 100vw;
-    }
-
-    #is-landscape {
-        width: 100vw;
-    }
-
-    #is-portrait {
-        width: 100vw;
-    }
-
-    #is-extra {
-        width: 100vw;
-        box-shadow: none;
     }
 
     .text-works {
@@ -618,23 +461,23 @@ h2 span a:hover {
         animation: shake 1s ease-in-out;
     }
     
- @keyframes shake {
-    0% {
-        padding-bottom: 46px;
+    @keyframes shake {
+        0% {
+            padding-bottom: 46px;
+        }
+        25% {
+            padding-bottom: 66px;
+        }
+        50% {
+            padding-bottom: 46px;
+        }
+        75% {
+            padding-bottom: 66px;
+        }
+        100% {
+            padding-bottom: 46px;
+        }
     }
-    25% {
-        padding-bottom: 66px;
-    }
-    50% {
-        padding-bottom: 46px;
-    }
-    75% {
-        padding-bottom: 66px;
-    }
-    100% {
-        padding-bottom: 46px;
-    }
-}
 
     .project-hr {
         width: 300px;
@@ -645,122 +488,99 @@ h2 span a:hover {
         margin-left: -30px;
     }
 
-.backButton {
-    padding-left: 20px;
-    font-size: 10px;
-    text-align: left;
-}
+    .backButton {
+        padding-left: 20px;
+        font-size: 10px;
+        text-align: left;
+    }
 
-#text-works_htdadt {
-    bottom: -295px;
-}
+    #text-works_htdadt {
+        bottom: -295px;
+    }
 
-#text-works_htdadt:hover, #text-works_htdadt:active {
-    bottom: -0px;
-}
+    #text-works_htdadt:hover,
+    #text-works_pb:hover,
+    #text-works_ab:hover,
+    #text-works_dd:hover,
+    #text-works_at:hover,
+    #text-works_yahn:hover,
+    #text-works_ootb:hover,
+    #text-works_httyr:hover,
+    #text-works_nz:hover,
+    #text-works_es:hover,
+    #text-works_wi:hover {
+        bottom: -0px;
+    }
 
-#text-works_pb {
-    bottom: -350px;
-}
+    #text-works_pb {
+        bottom: -350px;
+    }
 
-#text-works_pb:hover, #text-works_pb:active {
-    bottom: -0px;
-}
+    #text-works_ab {
+        bottom: -325px;
+    }
 
-#text-works_ab {
-    bottom: -325px;
-}
+    #text-works_dd {
+        bottom: -370px;
+    }
 
-#text-works_ab:hover, #text-works_ab:active {
-    bottom: -0px;
-}
+    #text-works_at {
+        bottom: -365px;
+    }
 
-#text-works_dd {
-    bottom: -370px;
-}
+    #text-works_yahn {
+        bottom: -415px;
+    }
 
-#text-works_dd:hover, #text-works_dd:active {
-    bottom: -0px;
-}
+    #text-works_ootb {
+        bottom: -520px;
+    }
 
-#text-works_at {
-    bottom: -365px;
-}
+    #text-works_httyr {
+        bottom: -380px;
+    }
 
-#text-works_at:hover, #text-works_at:active{
-    bottom: -0px;
-}
+    #text-works_nz {
+        bottom: -360px;
+    }
 
-#text-works_yahn {
-    bottom: -415px;
-}
+    #text-works_es {
+        bottom: -400px;
+    }
 
-#text-works_yahn:hover, #text-works_yahn:active  {
-    bottom: -0px;
-}
+    #text-works_wi {
+        bottom: -330px;
+    }
 
-#text-works_ootb {
-    bottom: -520px;
-}
+    .img-works img:first-child {
+        mask-image: linear-gradient(to bottom, transparent 0%, black 30%);
+        mask-mode: alpha;
+    }
 
-#text-works_ootb:hover, #text-works_ootb:active {
-    bottom: -0px;
-}
+    .img-works img:last-child {
+        mask-image: linear-gradient(to top, transparent 0%, black 30%);
+        mask-mode: alpha;
+    }
 
-#text-works_httyr {
-    bottom: -380px;
-}
+    .img-works iframe {
+        width: 100vw;
+    }
 
-#text-works_httyr:hover, #text-works_httyr:active {
-    bottom: -0px;
+    #is-landscape {
+        width: 100vw;
+    }
 
-}
+    #is-portrait {
+        width: 100vw;
+    }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+    #is-extra {
+        width: 100vw;
+        box-shadow: none;
+    }
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-</style>
-<body data-demoway-document-id="kir5x8tfhz32ihguf29eta2t">
+    </style>
+<body>
     <div class="main-content" id="main">
         <img id="border" src="img/zickzack.png">
         <br>
@@ -782,17 +602,17 @@ table {
         <br>
         <br>
         <p><span class="el-star">✶</span> Hello World <span class="el-star">✶</span> <br>
-            Welcome to my Website</p>
+            Welcome to my Portfolio</p>
         <br>
         <br>
         <br>
         <p class="stars">************************************************</p>
         <br>
         <br>
-        <p>You were served by Lina Schwarzenberg</p>
+        <p>You were served by Max Musti</p>
         <br>
         <br>
-        <p id="bluredHover" class="bio">Lina Schwarzenberg is a designer who operates <br>at the intersection of design, art, and technology. In addition <br>to her work as a graphic and web designer, she has developed <br>a particular fascination for the interaction between humans and machines. Schwarzenberg delves into the impact of artificial intelligence and critically and experimentally explores both the potential and limitations <br>of this technology, particularly within the realm of design.</p>
+        <p id="bluredHover" class="bio">Max Musti is a designer who operates <br>at the intersection of design, art, and technology. In addition <br>to his work as a graphic and web designer, he has developed <br>a particular fascination for the interaction between humans and machines. Musti delves into the impact of artificial intelligence and critically and experimentally explores both the potential and limitations <br>of this technology, particularly within the realm of design.</p>
         <br>
         <br>
         <br>
@@ -840,7 +660,7 @@ table {
         <br>
         <hr style="border: none; border-top: 1px dashed black">
         <br>
-        <p id="project"><a id="blurLink" class="hrLink" href="how-to-tame-your-robot.html"><span>How to Tame your Robot</span><span>2021</span></a></p>
+        <p id="project"><a id="blurLink" class="hrLink" href="how-to-tame-your-robot.html"><span>How to Tame Your Robot</span><span>2021</span></a></p>
         <br>
         <hr style="border: none; border-top: 1px dashed black">
         <br>
@@ -853,7 +673,7 @@ table {
         <hr style="border: none; border-top: 1px dashed black">
         <br>
         <br>
-        <p id="project"> <a id="mailto" href="mailto:hi@linaschwarzenberg.com">SLIDE INTO MY DM's FOR COLLAB :)))</a><br></p>
+        <p id="project"> <a id="mailto" href="mailto:hi@maxmusti.com">SLIDE INTO MY DM's FOR COLLAB :)))</a><br></p>
         <br>
         <br>
         <p class="stars">************************************************</p>
@@ -870,7 +690,7 @@ table {
 	</pre>
         <br>
         <br>
-        <p>for visiting my website</p>
+        <p>for visiting my portfolio</p>
         <br>
         <br>
         <p class="stars">************************************************</p>
@@ -878,11 +698,10 @@ table {
         <br>
         <br>
         <br>
-        <p class="bio">Lina Schwarzenberg is an alumna of the Studienstiftung des <br>
-        	deutschen Volkes and holds a master's degree from <a href="https://www.htw-dresden.de/hochschule/fakultaeten/design">HTWD Design</a>. Since the inception of the <a href="prompt-battle.html">Prompt Battle</a>, she has participated in events such <br> as Transmediale and Re:publica. Her work has been showcased in a variety of exhibitions, both online and irl. She has delivered talks and workshops at numerous venues, including Gropius Bau, Japanisches Palais, and Deutschlandfunk. Schwarzenberg is a member of the <a href="https://fabmobil.org/">Fabmobil</a> Crew. 
-        	 <br>
-        	  <br>
-        	For more details, please → <a id="linkCV" href="CV-Lina-Schwarzenberg.txt" download="">download her CV</a> ←
+        <p class="bio">Max Musti is an alumnus of the [insert scholarship or program here] and holds a master's degree from <a href="https://www.example.com">[Your University]</a>. Since the inception of the <a href="prompt-battle.html">Prompt Battle</a>, he has participated in events such as Transmediale and Re:publica. His work has been showcased in a variety of exhibitions, both online and in real life. He has delivered talks and workshops at numerous venues, including [insert notable venues]. Musti is a member of the <a href="https://www.example.org">[Your Organization]</a> Crew. 
+         <br>
+          <br>
+        For more details, please → <a id="linkCV" href="CV-Max-Musti.txt" download="">download his CV</a> ←
         </p>
         <br>
         <br>
@@ -896,8 +715,8 @@ table {
         <br>
         <br>
         <p class="bottom">Any Questions? <br>
-            Contact <a id="mailto" href="mailto:hi@linaschwarzenberg.com">hi@linaschwarzenberg.com</a><br>
-            <a href="https://www.instagram.com/solvem.probler/">Instagram</a>, <a href="https://twitter.com/solvemprobler_">Twitter</a></p>
+            Contact <a id="mailto" href="mailto:hi@maxmusti.com">hi@maxmusti.com</a><br>
+            <a href="https://www.instagram.com/maxmusti/">Instagram</a>, <a href="https://twitter.com/maxmusti_">Twitter</a></p>
         <br>
         <br>
         <br>
@@ -906,6 +725,34 @@ table {
                 <br>
                 <img id="border-bottom" src="img/zickzack.png">
     </div>
-    <img class="background-img" src="https://static.vecteezy.com/system/resources/previews/014/455/889/non_2x/empty-shopping-trolley-transparent-free-png.png">
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Function to update date and time
+    function updateDateTime() {
+        const dateContainer = document.getElementById('date-container');
+        const now = new Date();
+        const date = now.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+        const time = now.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+        dateContainer.textContent = `Date: ${date} Time: ${time}`;
+    }
+
+    // Initial date and time update
+    updateDateTime();
+    
+    // Update date and time every second
+    setInterval(updateDateTime, 1000);
+
+    // Highlight project link on hover
+    const projectLinks = document.querySelectorAll('#project a');
+    projectLinks.forEach(link => {
+        link.addEventListener('mouseover', () => {
+            link.style.textDecoration = 'underline';
+        });
+        link.addEventListener('mouseout', () => {
+            link.style.textDecoration = 'none';
+        });
+    });
+});
+</script>
 </body>
 </html>
